@@ -1,1 +1,276 @@
 # 100-tag-HTML-dan-CSS-inline.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>100 Tag HTML Lengkap</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fff5f0; margin:0; padding:0;">
+
+    <header style="background-color: #7a231d; padding: 20px; text-align: center; color: white;">
+        <h1 style="margin:0;">Hai, Selamat Datang!</h1>
+        <p style="margin:5px;">WEB UI/UX!</p>
+    </header>
+
+    <menu style="background-color: #fdd; padding: 10px; text-align: center;">
+        <a href="index.html" style="margin: 0 10px; text-decoration: none; color: black;">Home</a>
+        <a href="blog.html" style="margin: 0 10px; text-decoration: none; color: black;">Blog</a>
+        <a href="about.html" style="margin: 0 10px; text-decoration: none; color: black;">About Me</a>
+        <a href="portofolio.html" style="margin: 0 10px; text-decoration: none; color: black;">Portofolio</a>
+        <a href="contact.html" style="margin: 0 10px; text-decoration: none; color: black;">Contact</a>
+    </menu>
+    <main style="padding: 20px;">
+        <audio controls style="display:block; margin: 10px 0;"></audio>
+
+        <p>
+            <b>Tumis</b>, <i>Rebus</i>, <u>Masak</u>, <mark>Yourike</mark>, <small>Wajan</small>
+        </p>
+
+        <blockquote>Masak mudah hiduppun jadi Mudah</blockquote>
+
+        <details>
+            <summary>Detail</summary>
+            Ini adalah bagian detail yang bisa dibuka.
+        </details>
+
+        <form style="margin: 10px 0;">
+            <label>Teks:</label>
+            <input type="text">
+            <button>Klik</button>
+        </form>
+
+        <dialog id="infoDialog" open style="padding: 20px; border: 1px solid #333; border-radius: 8px; background-color: #fff; color: #000; width: 320px; top: 20%; position: fixed; left: 0; right: 0; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+            <h3 style="text-align: center; margin-top: 0;">Informasi</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px;">
+                <tr>
+                    <th style="text-align: left; border-bottom: 1px solid #ccc; padding: 5px;">Nama</th>
+                    <td id="namaValue" style="padding: 5px;">HTML Dialog</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border-bottom: 1px solid #ccc; padding: 5px;">Fungsi</th>
+                    <td id="fungsiValue" style="padding: 5px;">Menampilkan kotak pesan</td>
+                </tr>
+            </table>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+                <input type="text" id="inputNama" placeholder="Ganti Nama..." style="padding: 5px;">
+                <input type="text" id="inputFungsi" placeholder="Ganti Fungsi..." style="padding: 5px;">
+                <button onclick="ubahData()" style="padding: 6px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">Ubah Teks</button>
+            </div>
+        </dialog>
+        
+        <script>
+            function ubahData() {
+                const namaBaru = document.getElementById('inputNama').value;
+                const fungsiBaru = document.getElementById('inputFungsi').value;
+        
+                if (namaBaru) document.getElementById('namaValue').textContent = namaBaru;
+                if (fungsiBaru) document.getElementById('fungsiValue').textContent = fungsiBaru;
+            }
+        </script>
+        <hr>
+
+        <table border="1" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            <caption style="caption-side: top; font-size: 1.5em; font-weight: bold; margin: 10px 0;">Menu</caption>
+            <thead style="background-color: #f8caca;">
+                <tr>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Judul</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #fff;">
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <input type="text" placeholder="Isi" style="width: 100%; padding: 8px; border: 1px solid #ccc; box-sizing: border-box;">
+                    </td>
+                </tr>
+                <tr style="background-color: #fdf5f5;">
+                    <td style="padding: 10px; border: 1px solid #ddd;">
+                        <input type="text" placeholder="Isi Tambahan" style="width: 100%; padding: 8px; border: 1px solid #ccc; box-sizing: border-box;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <<ul style="list-style: none; padding: 0;">
+                <li style="padding: 8px; background-color: #f0f8ff; margin-bottom: 5px; border-left: 5px solid #00aaff; font-weight: bold; transition: background-color 0.3s;">
+                    🔹 Item 1
+                </li>
+                <li style="padding: 8px; background-color: #f0f8ff; margin-bottom: 5px; border-left: 5px solid #00aaff; font-weight: bold; transition: background-color 0.3s;">
+                    🔸 Item 2
+                </li>
+            </ul>
+
+        <ol>
+            <li>Item A</li>
+            <li>Item B</li>
+        </ol>
+
+        <section style="padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; margin: 20px 0;">
+            <h2 style="color: #333; margin-bottom: 10px;">Menu Hari Ini</h2>
+            <p style="color: #555; line-height: 1.6;">Bingung mau masak apa hari ini?</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px;">
+                <img src="5.jpg" alt="Tempe Mendoan" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="6.jpg" alt="Tumis Daun Pepaya" style="width: 45%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            </div>
+        </section>
+
+        <article style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #fff8e1; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); margin: 20px 0;">
+            <h3 style="color: #d35400; margin-bottom: 10px;">Bingung mau masak apa hari ini?</h3>
+            <p style="color: #333; line-height: 1.6;">Tenang, di sini ada banyak resep simpel dan lezat untukmu! Temukan inspirasi masakan sehari-hari yang mudah dibuat dan pasti enak!</p>
+        </article>
+
+        <aside style="background-color:#eee; padding:10px;">
+            <p>Baca Selengkapnya</p>
+        </aside>
+
+        <div style="padding: 15px; border: 1px solid #aaa; border-radius: 6px; margin-bottom: 20px; background-color: #f0fff0;">
+            <strong style="font-size: 1.1em;">Tips Memasak:</strong>
+            <p style="margin-top: 8px; color: #333; line-height: 1.6;">
+                Gunakan bumbu segar seperti bawang putih, cabai, dan jeruk nipis untuk meningkatkan rasa masakanmu. Jangan lupa sejumput garam!
+            </p>
+        </div>
+        
+        <figure style="text-align: center; margin: 0;">
+            <img src="2.jpg" alt="Bumbu dapur segar" style="display: block; margin: 0 auto 10px; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <figcaption style="font-size: 0.95em; color: #555;">Bumbu Dapur Segar: Cabai, Bawang Putih, Jeruk, dan Rempah-rempah</figcaption>
+        </figure>
+       
+        <abbr title="HyperText Markup Language" style="text-decoration: underline dotted; cursor: help; font-weight: bold; color: #c0392b;">
+            HTML
+        </abbr>
+        <address>Sulawesi Selatan,Makassar</address>
+
+        <bdo dir="rtl">Selamat Datang</bdo>
+
+<!-- Canvas sebagai area grafis -->
+<canvas width="200" height="50" style="border:1px solid #000;">
+    Browser Anda tidak mendukung elemen canvas.
+</canvas>
+
+<!-- Menampilkan kode -->
+<code>let username = "pengguna";</code>
+
+<!-- Menampilkan nilai data -->
+<data value="85">85 poin pengalaman</data>
+
+<!-- Penekanan teks -->
+<em>Harap baca panduan sebelum lanjut.</em>
+
+<!-- Iframe menampilkan info ringkas -->
+<iframe srcdoc="<p>Informasi tambahan tersedia di sini.</p>" style="width:200px; height:60px;"></iframe>
+
+<!-- Shortcut keyboard -->
+<p>Tekan <kbd>Ctrl + S</kbd> untuk menyimpan perubahan.</p>
+
+<!-- Input dengan label -->
+<label for="nama">Nama Lengkap:</label>
+<input id="nama" type="text" placeholder="Masukkan nama Anda">
+
+<!-- Form legend (biasanya dipakai dalam fieldset) -->
+<fieldset style="margin-top: 10px;">
+    <legend>Informasi Pribadi</legend>
+    <!-- input bisa ditempatkan di sini -->
+</fieldset>
+
+<!-- Indikator progres atau status -->
+<p>Progress Belajar:</p>
+<meter value="70" min="0" max="100" style="width: 150px;"></meter>
+
+<!-- Navigasi -->
+<nav style="margin-top: 10px;">
+    <a href="#">Beranda</a> |
+    <a href="#">Profil</a> |
+    <a href="#">Kontak</a>
+</nav>
+        <output>Output</output>
+
+        <progress value="50" max="100" style="width:150px;"></progress>
+
+        <ruby>
+            漢<rt>kan</rt>
+            字<rt>ji</rt>
+        </ruby>
+
+        <s>Coret</s>
+
+        <samp>Sample Output</samp>
+
+        <strong>Strong</strong>
+
+        <sub>Subscript</sub>
+
+        <sup>Superscript</sup>
+
+        <time datetime="2025-05-05">Hari ini</time>
+
+        <var>x</var>
+
+        <video width="200" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video>
+
+        <wbr>Disini<wbr>Terputus
+
+        <details>
+            <summary>Info Tambahan</summary>
+            <p>Ini info tambahan.</p>
+        </details>
+
+        <template>
+            <p>Ini template tersembunyi</p>
+        </template>
+
+        <fieldset>
+            <legend>Form Fieldset</legend>
+            <input type="text">
+        </fieldset>
+
+        <dl>
+            <dt>Term</dt>
+            <dd>Definisi</dd>
+        </dl>
+
+        <address>Alamat Website</address>
+
+        <q>Quote Pendek</q>
+
+        <object data="https://via.placeholder.com/100" type="image/png" style="width:100px; height:100px;"></object>
+
+        <param name="autoplay" value="true">
+
+        <bdi>BDI teks</bdi>
+
+        <cite>Citation</cite>
+
+        <span style="color:green;">Span Hijau</span>
+
+        <u>Underlined</u>
+
+        <kbd>Shift</kbd>
+
+        <datalist id="dataList">
+            <option value="Pilihan 1">
+            <option value="Pilihan 2">
+        </datalist>
+
+        <keygen name="name">
+
+        <optgroup label="Kelompok">
+            <option value="1">Satu</option>
+        </optgroup>
+
+        <menu>
+            <li>Menu 1</li>
+        </menu>
+
+        <marquee behavior="scroll" direction="left" style="background:#eee;">Teks Berjalan</marquee>
+
+    </main>
+
+    <footer style="background-color:#333; color:white; text-align:center; padding:20px; margin-top:20px;">
+        <p>Footer Utama</p>
+        <small>&copy; 2025 Website HTML Lengkap</small>
+    </footer>
+
+</body>
+</html>
